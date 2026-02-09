@@ -6,10 +6,12 @@ Used to display the username of the current user.
 
 ## id
 **Output:**
-```text uid=1000(srosa) gid=1000(srosa) groups=1000(srosa), 27(sudo)
+uid=1000(srosa) gid=1000(srosa) groups=1000(srosa), 27(sudo)
+```
 **Security Insight:**
 User is part of the sudo group, allowing privilege escalation via sudo.
 Root login is not used directly.
+```
 **Purpose:**
 Displays user ID(UID), primary group ID(GID), group memmberships.
 Confirms if user has sudo privileges.
