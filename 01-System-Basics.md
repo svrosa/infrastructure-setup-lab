@@ -1,12 +1,12 @@
 ## whoami 
 **Output:** 
 srosa 
-**Purpose:**(
+**Purpose:**
 Used to display the username of the current user.
 
 ## id
 **Output:**
-uid=1000(srosa) gid=1000(srosa) groups=1000(srosa), 27(sudo)
+```text uid=1000(srosa) gid=1000(srosa) groups=1000(srosa), 27(sudo)
 **Security Insight:**
 User is part of the sudo group, allowing privilege escalation via sudo.
 Root login is not used directly.
