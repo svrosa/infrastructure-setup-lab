@@ -66,7 +66,8 @@ Used to verify available storage and confirm LVM configuration.
 - Total RAM: 3.8Gi  
 - Used: 483Mi  
 - Available: 3.3Gi  
-- Swap: Disable (0B)  
+- Swap: Disable (0B)    
+
 **Purpose:**  
 Displays memory usage.
 The "Available" field shows usable memory without swapping.
