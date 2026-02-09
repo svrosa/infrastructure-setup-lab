@@ -31,10 +31,10 @@ Displays the user's  UID, primary GID, and group memberships to confirm sudo acc
 
 ## /etc/passwd Analysis
 
-Example Entries:
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-srosa:x:1000:1000:Sandro Rosa:/home/srosa:/bin/bash
+**Example Entries:**  
+root:x:0:0:root:/root:/bin/bash  
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
+srosa:x:1000:1000:Sandro Rosa:/home/srosa:/bin/bash  
 sandroadmin:x:1001:1001:,,,:/home/sandroadmin:/bin/bash
 
 ### Field Structure
