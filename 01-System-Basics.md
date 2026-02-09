@@ -1,6 +1,6 @@
 ## whoami 
 **Output:** 
-srosa 
+srosa   
 **Purpose:**
 Used to display the username of the current user.
 
