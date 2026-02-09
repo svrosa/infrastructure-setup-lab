@@ -6,7 +6,10 @@ sudo adduser <username>
 sudo usermod -aG sudo <username>
 ```
 **Purpose:**
-Creates a new local user and grants sudo privileges by adding the user to the sudo group.
+Creates a new local user and grants sudo privileges by adding the user to the sudo group.  
+**Security Insight:**
+Privilege escalation is controlled via group memberships.  
+Users should not log in as root directly.
 
 ## Switching User Context
 ```bash
