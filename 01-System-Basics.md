@@ -55,7 +55,7 @@ Storage Configuration
 - Virtual Disk Size: 50GB    
 - Root Logical Volume (/): 24GB allocated    
 - Free Space in LVM: ~24GB (available for expansion)
-- LVM is enabled for flexible storage management.  
+- LVM is enabled for flexible storage management.
 **Purpose:**
 Displays disk usage and mounted filesystems.  
 Used to verify available storage and confirm LVM configuration.
