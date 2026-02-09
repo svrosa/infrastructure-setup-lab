@@ -63,5 +63,5 @@ System accounts use restricted shells to prevent interactive access.
 ```bash
 awk -F: '{print $1, $3, $7}' /etc/passwd
 ```
-Shows: username UID shell
-Purpose: Cleaner View.
+**Shows:** username UID shell  
+**Purpose:** Cleaner View.
