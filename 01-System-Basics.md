@@ -27,7 +27,7 @@ cloudlab-01
 Used to show current hostname.
 
 ## ip a
-**Output (Summary):**
+**Output (Summary):**  
 Primary Interface: ens3  
 State: UP  
 IPv4 Address: 192.168.109.128/24 (NAT - Private Network)  
