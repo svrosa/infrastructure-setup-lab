@@ -73,11 +73,11 @@ Displays memory usage.
 The "Available" field shows usable memory without swapping.
 
 ## top
-**Output (Snapshot Summary):**
-Load Average: 0.07, 0.02, 0.00
-CPU Usage: ~1% user, ~1% system (mostly idle)
-Memory Usage: 478.8 used / 3.8Gi
-Tasks: 212 total (1 running, 211 sleeping, 0 zobmie)  
+**Output (Snapshot Summary):**  
+- Load Average: 0.07, 0.02, 0.00
+- CPU Usage: ~1% user, ~1% system (mostly idle)
+- Memory Usage: 478.8 used / 3.8Gi
+- Tasks: 212 total (1 running, 211 sleeping, 0 zobmie)      
 
 **Purpose:**
 Displays real-time system resource usage including CPU, memory, and process state.
