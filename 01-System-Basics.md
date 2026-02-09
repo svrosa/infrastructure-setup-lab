@@ -39,16 +39,16 @@ Used to verify connectivity and confirm assigned IP address.
 ## df -h
 **Output (Summary):**  
 Root Filesystem (/):    
-  Total Size: 24G    
-  Used: 6.4G    
-  Available: 16G    
-  Usage: 29%    
+- Total Size: 24G    
+- Used: 6.4G    
+- Available: 16G    
+- Usage: 29%    
 
 Boot Partition (/boot):    
-  Size: 2G    
+- Size: 2G    
 
 Storage Model:    
-  LVM (Logical Volume Manager) enabled.  
+- LVM (Logical Volume Manager) enabled.  
 
 Storage Configuration  
 
