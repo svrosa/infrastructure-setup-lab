@@ -30,7 +30,9 @@ id
 Displays the user's  UID, primary GID, and group memberships to confirm sudo access.
 
 ## /etc/passwd Analysis
-
+```bash
+cat /etc/passwd
+```
 **Example Entries:**  
 root:x:0:0:root:/root:/bin/bash  
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin  
