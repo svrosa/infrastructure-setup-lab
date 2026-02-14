@@ -36,9 +36,9 @@ sudo nano /etc/ssh/sshd_config
 `  
 
 **Example Entries:**  
-PermitRootLogin prohibit-password
-PasswordAuthentication yes
-PubkeyAuthentication yes
+PermitRootLogin prohibit-password  
+PasswordAuthentication yes  
+PubkeyAuthentication yes  
 
 **What it means:**
 - PermitRootLogin prohibit-password
