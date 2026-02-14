@@ -90,8 +90,8 @@ Separation of /etc/passwd and /etc/shadow prevents exposure of password hashes t
 **Group:** shadow  
 **Permissions:** -rw-r----- 
 ### Breakdown
-Owner (root) → rw- (read + write)
-Group (shadow) → r-- (read only)
+Owner (root) → rw- (read + write)  
+Group (shadow) → r-- (read only)  
 Others → --- (no access)
 
 **Security Insight:**
