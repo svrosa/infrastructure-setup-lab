@@ -2,5 +2,5 @@
 
 **Verify if SSH is installed:** 
 
-<sudo systemctl status ssh>
+`sudo systemctl status ssh`
 
