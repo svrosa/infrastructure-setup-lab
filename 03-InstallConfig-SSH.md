@@ -42,11 +42,11 @@ PubkeyAuthentication yes
 
 **What it means:**
 - PermitRootLogin prohibit-password
- - Root cannot log in with a password
- - Root can log in with SSH keys (if configured)
+  - Root cannot log in with a password
+  - Root can log in with SSH keys (if configured)
 
 - PasswordAuthentication yes
- - Password logins are allowed (we’ll disable later)
+  - Password logins are allowed (we’ll disable later)
 
 - PubkeyAuthentication yes
- - Key-based login is allowed (good)
+  - Key-based login is allowed (good)
