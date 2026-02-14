@@ -66,7 +66,7 @@ Look for the ens33 IPv4 192.168.109.xxx.
 **Windows Powershell:**
 `
 ssh <username>@192.xxx.xxx.xxx
-`
+`  
 Might see something like this:
 `
 The authenticity of host can't be established...   
