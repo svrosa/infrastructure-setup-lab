@@ -8,7 +8,8 @@ sudo systemctl status ssh
 ## Enable SSH if needed:  
 `
 sudo systemctl enable ssh
-`    
+`
+  
 This ensures SSH starts automatically after reboot.
 
 ## Verify if its listening on port 22:  
