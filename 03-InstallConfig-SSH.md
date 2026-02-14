@@ -67,11 +67,12 @@ Look for the ens33 IPv4 192.168.109.xxx.
 `
 ssh <username>@192.xxx.xxx.xxx
 `  
-Might see something like this:
+Might see something like this:  
 `
-The authenticity of host can't be established...   
+The authenticity of host can't be established...     
 Are you sure you want to continue connecting (yes/no)?
-` type yes, you'll be prompted enter your password.
+`  
+Type yes, you'll be prompted enter your password.
 
 **It this works**
 You'll be inside VM via SSH.
