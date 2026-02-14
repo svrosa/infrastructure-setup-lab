@@ -50,3 +50,32 @@ PubkeyAuthentication yes
 
 - PubkeyAuthentication yes
   - Key-based login is allowed (good)
+
+### Verify SSH works from Windows host
+Safety step so we dont lock ourselves out.
+**Get VM IP:**
+`
+ip a | grep inet
+`  
+
+**Example Entries:**  
+inet 192.168.109.xxx/xx metric 100 brd 192.xxx.xxx.255 scope global dynamic ens33
+
+Look for the ens33 IPv4 192.168.109.xxx.
+
+**Windows Powershell:**
+`
+ssh <username>@192.xxx.xxx.xxx
+`
+Might see something like this:
+`
+The authenticity of host can't be established...   
+Are you sure you want to continue connecting (yes/no)?
+` type yes, you'll be prompted enter your password.
+
+**It this works**
+You'll be inside VM via SSH.
+Meaning:
+- SSH is properly configured
+- Network works
+- You can safely harden withou locking yourself out **Most Important!**
