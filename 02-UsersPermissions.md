@@ -67,3 +67,33 @@ awk -F: '{print $1, $3, $7}' /etc/passwd
 ```
 **Shows:** username UID shell  
 **Purpose:** Cleaner View.
+
+## /etc/shadow Analysis
+```bash
+sudo cat /etc/shadow
+```
+Stores encrypted password hashes and password aging policies.
+Only readable by root.
+
+**Example Entries:**  
+username:$y$j9T$abc123hash...:19000:0:99999:7:::
+
+### Field Structure
+`username:password_hash:last_change:min:max:warn:inactive:expire:reserved`
+
+**Security Insight:**
+Separation of /etc/passwd and /etc/shadow prevents exposure of password hashes to normal users.
+
+## /etc/shadow Permissions
+
+**Owner:** root  
+**Group:** shadow  
+**Permissions:** -rw-r----- 
+### Breakdown
+Owner (root) → rw- (read + write)
+Group (shadow) → r-- (read only)
+Others → --- (no access)
+
+**Security Insight:**
+Only root and the shadow group can read password hashes.
+Normal users cannot access this file.
