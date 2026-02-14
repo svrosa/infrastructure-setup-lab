@@ -102,8 +102,6 @@ Normal users cannot access this file.
 ```bash
 cat /etc/group
 ```
-Stores encrypted password hashes and password aging policies.
-Only readable by root.
 
 **Example Entries:**  
 sudo:x:27:srosa,sandroadmin  
