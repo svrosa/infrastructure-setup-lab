@@ -97,3 +97,24 @@ Others → --- (no access)
 **Security Insight:**
 Only root and the shadow group can read password hashes.
 Normal users cannot access this file.
+
+## /etc/group Analysis
+```bash
+cat /etc/group
+```
+Stores encrypted password hashes and password aging policies.
+Only readable by root.
+
+**Example Entries:**  
+sudo:x:27:srosa,sandroadmin  
+root:x:0
+
+### Field Structure
+`group_name:x:GID:user1,user2,user3`
+
+**Purpose:**
+Defines group memberships and group IDs.  
+
+**Security Insight:**
+Users in the sudo group can perform privilege escalation via sudo.
+Users are not members of the shadow group, preventing direct access to password hashes.
