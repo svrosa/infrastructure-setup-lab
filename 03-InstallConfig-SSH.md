@@ -1,17 +1,17 @@
 # Install & Configure SSH
 
-## Verify if SSH is installed:** 
+## Verify if SSH is installed:  
 `
 sudo systemctl status ssh
 ` 
 
-## Enable SSH if needed:**
+## Enable SSH if needed:  
 `
 sudo systemctl enable ssh
 `  
 This ensures SSH starts automatically after reboot.
 
-## Verify if its listening on port 22:**
+## Verify if its listening on port 22:  
 `
 sudo ss -tulnp | grep ssh
 `  
