@@ -26,7 +26,6 @@ tcp LISTEN 0 0000 [::]:22 [::]:* users:(("sshd",pid=920, fd=4),("systemd", pid=1
 - Listening on port 22 
 - Bound to all IPv4 interfaces (0.0.0.0) 
 - Bound to all IPv6 interfaces ([::]) 
-- Managed by systemd
-  - Shamone 
+- Managed by systemd 
   
 This is a fully active SSH daemon.
