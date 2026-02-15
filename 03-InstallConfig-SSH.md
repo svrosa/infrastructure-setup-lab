@@ -69,7 +69,7 @@ ssh <username>@192.xxx.xxx.xxx
 `  
 Might see something like this:  
 ```bash
-The authenticity of host can't be established...
+The authenticity of host cant be established...
 Are you sure you want to continue connecting (yes/no)?
 ```  
 Type yes, you'll be prompted enter your password.
