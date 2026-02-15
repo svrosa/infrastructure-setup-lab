@@ -80,3 +80,5 @@ Meaning:
 - SSH is properly configured
 - Network works
 - You can safely harden withou locking yourself out. **Most Important!**
+
+## WIP
