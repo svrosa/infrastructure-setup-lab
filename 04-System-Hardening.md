@@ -78,4 +78,4 @@ It shows:
 - Currently banned
 - Total banned
 
-Likely 0 since its a local lab.
+Likely 0 since this is a local lab.
