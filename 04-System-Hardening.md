@@ -37,6 +37,17 @@ Default deny model = zero trust baseline.
 Only explicitly allowed services are reachable.  
 This mirrors cloud security groups behavior.
 
+### Validate Firewall
+**Run:**  
+`sudo ufw status numbered `
+
+This shows rule numbering.  
+**Then:**    
+`sudo iptables -L `  
+
+This shows underlying firewall rules.  
+Important for understanding that UFW is a frontend to iptables.
+
 ## Install fail2ban
 
 **Inside the VM:**  
@@ -51,6 +62,20 @@ Check:
 Even though password auth is disabled, fail2ban:
 - Monitors logs
 - Detects brute force attempts
-- Bans IP addresses automatically
+- Automatically bans IP addresses performing suspicous activity.  
 
 This simulates intrusion detection behavior in cloud environments.
+
+### Verify Jail
+**Run:**  
+`sudo fail2ban-client status `  
+Should see:  
+`jail list: sshd `  
+**Then:**  
+`sudo fail2ban-client status sshd `  
+
+It shows:
+- Currently banned
+- Total banned
+
+Likely 0 since its a local lab.
