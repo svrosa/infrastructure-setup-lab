@@ -74,7 +74,7 @@ Are you sure you want to continue connecting (yes/no)?
 ```  
 Type yes, you'll be prompted enter your password.
 
-**It this works**
+**It this works:**  
 You'll be inside VM via SSH.
 Meaning:
 - SSH is properly configured
