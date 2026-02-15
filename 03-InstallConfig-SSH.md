@@ -82,3 +82,31 @@ Meaning:
 - You can safely harden withou locking yourself out. **Most Important!**
 
 ## Harden SSH
+### Generate SSH Key on Windows:
+In powershell we run:
+`ssh-keygen -t ed25519 `
+For lab simplicity we leave default location and no passphrase.
+**This creates at:**
+```bash
+C:\Users\<user>\.ssh\id_ed25519
+C:\Users\<user>\.ssh\id_ed25519.pub
+```
+### Copy Public Key to VM
+`type $env:USERPROFILE\.ssh\id_ed25519.pub `
+Copy the full output.
+`ssh-ed25519 <key.........> <user>@DESKTOP-NAME `
+**Inside the SSH session (Powershell):**
+```bash
+mkdir -p ~/.ssh
+nano ~/.ssh/authorized_keys
+```
+Paste the key and save it.
+**Then we set permissions:**
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+**Once the key is saved and pemissions are set. We test by open a new powershell window.**
+`ssh <user>@<vm_ip> `
+We should be able to login, without password being required.
+
