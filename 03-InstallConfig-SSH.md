@@ -106,7 +106,7 @@ Paste the key and save it.
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
-**Once the key is saved and pemissions are set. We test by open a new powershell window.**
-`ssh <user>@<vm_ip> `
+**Once the key is saved and pemissions are set. We test by open a new powershell window.**  
+`ssh <user>@<vm_ip> `  
 We should be able to login, without password being required.
 
