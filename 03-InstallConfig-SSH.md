@@ -10,7 +10,10 @@ sudo systemctl status ssh
 sudo systemctl enable ssh
 `
   
-This ensures SSH starts automatically after reboot.
+This ensures SSH starts automatically after reboot. 
+
+**Security Insight:**  
+Remote access services should always be verified and controlled. Should never assume a service is running securely by default.
 
 ## Verify if its listening on port 22:  
 `
@@ -28,7 +31,10 @@ tcp LISTEN 0 0000 [::]:22 [::]:* users:(("sshd",pid=920, fd=4),("systemd", pid=1
 - Bound to all IPv6 interfaces ([::]) 
 - Managed by systemd 
   
-This is a fully active SSH daemon.
+This is a fully active SSH daemon.  
+
+**Security Insight:**  
+Binding to 0.0.0.0 means that SSH accepts connections on all network interfaces, in a real cloud environments this must be restricted either via firewall or security group rules.  
 
 ## Check SSH
 `
@@ -49,7 +55,10 @@ PubkeyAuthentication yes
   - Password logins are allowed (we’ll disable later)
 
 - PubkeyAuthentication yes
-  - Key-based login is allowed (good)
+  - Key-based login is allowed (good)  
+
+**Security Insight:**  
+Default configs favors usability and simplicity. Hardening requires disabling insecure authentication methods.  
 
 ### Verify SSH works from Windows host
 Safety step so we dont lock ourselves out.
@@ -91,6 +100,9 @@ For lab simplicity we leave default location and no passphrase.
 C:\Users\<user>\.ssh\id_ed25519  
 C:\Users\<user>\.ssh\id_ed25519.pub
 ```
+**Security Insight:**  
+The private key remains on the client, only the public key is copied to the server.  
+
 ### Copy Public Key to VM
 In powershell we run:  
 `type $env:USERPROFILE\.ssh\id_ed25519.pub `  
@@ -107,6 +119,9 @@ Paste the key and save it.
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
+**Security Insight:**  
+SSH requires strict permissions. If `.ssh` or `authorized_keys` is too permissive, the authentication will fail.  
+
 **Once the key is saved and pemissions are set. We test by open a new powershell window.**  
 `ssh <user>@<vm_ip> `  
 We should be able to login, without password being required.
@@ -159,10 +174,18 @@ We try to force login with password again.
 it should say:  
 `<user>@<vm_ip>: Permission denied (publickey) `  
 
-### Best-Practice Checks
+### Best-Practice Check
 **On VM, we run:**  
 `sudo sshd -T | grep -E "passwordauthentication|permitrootlogin|pubkeyauthentication" `  
 **Should see:**
 - passwordauthentication no  
 - permitrootlogin no  
-- pubkeyauthentication yes  
+- pubkeyauthentication yes
+
+## Security Summary
+- SSH service is enabled and verified
+- Key-based authentication configured
+- Password authentication disabled
+- Root login disabled
+- Override configurations audited
+- Remote access validated safely before and after hardening
