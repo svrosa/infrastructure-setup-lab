@@ -6,7 +6,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-**Security Insight:**
+**Security Insight:**  
 Keeping packages updated reduces exposure to known CVEs(Common Vulnerabilities and Exposures) and privilege escalation vulnerabilities.
 
 ## Install UFW (Firewall)
