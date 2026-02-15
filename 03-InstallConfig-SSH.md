@@ -92,6 +92,7 @@ C:\Users\<user>\.ssh\id_ed25519
 C:\Users\<user>\.ssh\id_ed25519.pub
 ```
 ### Copy Public Key to VM
+In powershell we run:  
 `type $env:USERPROFILE\.ssh\id_ed25519.pub `  
 Copy the full output.  
 `ssh-ed25519 <key.........> <user>@DESKTOP-NAME `  
