@@ -83,12 +83,12 @@ Meaning:
 
 ## Harden SSH
 ### Generate SSH Key on Windows:
-In powershell we run:
-`ssh-keygen -t ed25519 `
+In powershell we run:  
+`ssh-keygen -t ed25519 `  
 For lab simplicity we leave default location and no passphrase.
 **This creates at:**
 ```bash
-C:\Users\<user>\.ssh\id_ed25519
+C:\Users\<user>\.ssh\id_ed25519  
 C:\Users\<user>\.ssh\id_ed25519.pub
 ```
 ### Copy Public Key to VM
