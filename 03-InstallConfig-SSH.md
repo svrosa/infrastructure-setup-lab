@@ -111,16 +111,16 @@ chmod 600 ~/.ssh/authorized_keys
 We should be able to login, without password being required.
 
 ## Disable Password Auth
-**Inside VM, we run:**
-`sudo nano /etc/ssh/sshd_config `
-**We find <PasswordAuthentication> and we change it to <no>, 
-confirm that <PermitRootLogin> is set to <no> , also delete "#" so it is not commented.**
+**Inside VM, we run:**  
+`sudo nano /etc/ssh/sshd_config `  
+**We find "PasswordAuthentication" and we change it to "no", 
+confirm that "PermitRootLogin" is set to "no" , also delete "#" so it is not commented.**
 
 ### Restart SSH and Password test
-**Restart SSH:**
-`sudo systemctl restart ssh `
-**In a new powershell window:**
-`ssh -o PreferredAuthentications=password <user>@<vm_ip> `
+**Restart SSH:**  
+`sudo systemctl restart ssh `  
+**In a new powershell window:**  
+`ssh -o PreferredAuthentications=password <user>@<vm_ip> `  
 We try to force password, it should fail.
 
 **If it doesnt, we do:**
@@ -133,16 +133,16 @@ passwordauthentication yes
 **This means SSH is overriding the settings somewhere.**
 
 #### Check/Fix Override
-**Ubuntu often uses:**
-`/etc/ssh/sshd_config.d/ `
-So lets fix it. 
-**Run:**
-`ls /etc/ssh/sshd_config.d/ `
-**Output: **
-`50-cloud-init.conf ` or something like this. 
-**We look for culprits:**
-`sudo grep -Ri passwordauthentication /etc/ssh/ `
-Look for those that say: `PasswordAuthentication yes` , disregard any that have "#", thats a commented line.
-In this case, it will be the `50-cloud-init.conf `.
-**Run:**
+**Ubuntu often uses:**  
+`/etc/ssh/sshd_config.d/ `  
+So lets fix it.   
+**Run:**  
+`ls /etc/ssh/sshd_config.d/ `  
+**Output:**    
+`50-cloud-init.conf ` or something like this.     
+**We look for culprits:**  
+`sudo grep -Ri passwordauthentication /etc/ssh/ `  
+Look for those that say: `PasswordAuthentication yes` , disregard any that have "#", thats a commented line.  
+In this case, it will be the `50-cloud-init.conf `.  
+**Run:**  
 `sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf `, change PasswordAuthentication to no.
