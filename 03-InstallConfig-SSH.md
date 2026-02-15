@@ -150,3 +150,18 @@ Save and Exit.
 **Restart SSH:** `sudo systemctl restart ssh `.  
 **Verify again:** `sudo sshd -T | grep passwordauthentication `.  
 **Should say:** `passwordauthentication no `.  
+
+## Final Checks
+We try to force login with password again.  
+**In Powershell:**  
+`ssh -o PreferredAuthentications=password <user>@<vm_ip> `  
+it should say:  
+`<user>@<vm_ip>: Permission denied (publickey) `  
+
+### Best-Practice Checks
+**On VM, we run:**  
+`sudo sshd -T | grep -E "passwordauthentication|permitrootlogin|pubkeyauthentication" `  
+**Should see:**
+- passwordauthentication no  
+- permitrootlogin no  
+- pubkeyauthentication yes  
