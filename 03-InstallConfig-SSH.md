@@ -145,4 +145,8 @@ So lets fix it.
 Look for those that say: `PasswordAuthentication yes` , disregard any that have "#", thats a commented line.  
 In this case, it will be the `50-cloud-init.conf `.  
 **Run:**  
-`sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf `, change PasswordAuthentication to no.
+`sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf `, change PasswordAuthentication to no.  
+Save and Exit.  
+**Restart SSH:** `sudo systemctl restart ssh `.  
+**Verify again:** `sudo sshd -T | grep passwordauthentication `.  
+**Should say:** `passwordauthentication no `.  
