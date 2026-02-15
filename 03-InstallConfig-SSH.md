@@ -30,7 +30,7 @@ tcp LISTEN 0 0000 [::]:22 [::]:* users:(("sshd",pid=920, fd=4),("systemd", pid=1
   
 This is a fully active SSH daemon.
 
-## Harden SSH
+## Check SSH
 `
 sudo nano /etc/ssh/sshd_config
 `  
@@ -81,4 +81,4 @@ Meaning:
 - Network works
 - You can safely harden withou locking yourself out. **Most Important!**
 
-## WIP
+## Harden SSH
