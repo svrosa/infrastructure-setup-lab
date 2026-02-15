@@ -79,4 +79,4 @@ You'll be inside VM via SSH.
 Meaning:
 - SSH is properly configured
 - Network works
-- You can safely harden withou locking yourself out **Most Important!**
+- You can safely harden withou locking yourself out. **Most Important!**
