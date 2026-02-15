@@ -114,8 +114,8 @@ We should be able to login, without password being required.
 ## Disable Password Auth
 **Inside VM, we run:**  
 `sudo nano /etc/ssh/sshd_config `  
-**We find "PasswordAuthentication" and we change it to "no", 
-confirm that "PermitRootLogin" is set to "no" , also delete "#" so it is not commented.**
+We find **PasswordAuthentication** and we change it to **no**, 
+confirm that **PermitRootLogin** is set to **no** , also delete **#** so it is not commented.
 
 ### Restart SSH and Password test
 **Restart SSH:**  
