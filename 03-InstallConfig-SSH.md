@@ -132,7 +132,7 @@ passwordauthentication yes
 ```
 **This means SSH is overriding the settings somewhere.**
 
-#### Check/Fix Override
+### Check/Fix Override
 **Ubuntu often uses:**  
 `/etc/ssh/sshd_config.d/ `  
 So lets fix it.   
