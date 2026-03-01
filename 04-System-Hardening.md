@@ -62,7 +62,7 @@ Check:
 Even though password auth is disabled, fail2ban:
 - Monitors logs
 - Detects brute force attempts
-- Automatically bans IP addresses performing suspicous activity.  
+- Automatically bans IP addresses performing suspicious activity.  
 
 This simulates intrusion detection behavior in cloud environments.
 
